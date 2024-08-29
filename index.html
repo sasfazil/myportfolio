@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACUCAMAAAAj+tKkAAAARVBMVEX///9useFnruCgy+r4+/5/ueScyOpirN/q9PqPwuf7/f7w9/xytOKnzuyUxOjA3PHR5fWv0+7f7fiHvuW72fHX6fbJ4PPoN7C7AAADj0lEQVR4nO2b27arIAxFC0JBBW+o//+pR9vuvXu1hEtgnMF69mGOAEkki9OpqAgg1krZstQUHyR73RnDuTGd7mVqmiexSSshKCUXUSqE0lM+kWyGmgjyJEHqoUlNdtXCf0L3KEr5kgGi1O/xrohV8s048Y94F0Q1peXrD/EuiHPefBthn45vtuBLGUOb+KWMobTk2wiTnGXJbfkI4SkIR+sAbiEc8fmml+J2JIGfDjtAALcQdth8EwRvF3IImwoUwC2EFW7fIBU0ggr3IPegI7JL4GbrGrjC2xrXqIBQvF2YfLAkeBVqKlxdAFdEQLs+61GoXZd2AdSIgGcXwDMeX+MGiFdLCmABLIAFsAAWQE/lXovz72Yg1x6/gJjXH6sLIGZHnf0/CXOJIOpgx8D/iw0m32mG3yzg3lRnfzcDriWodWTXAAUccPnyv2E9LbA76gUdEFSPUevwj7KfkwAWOcUC77K940o2TWy0VQyFTmcMGC0IRYIx2B3h94l7Ur69ohx7FvAryLOmo5JCu8Seil2sf3X13HYf6fNwH7Gek5cwUsIzwdvVrufdu/ULJ4Q6r21qqgc17TLW/NLGKl6PS5uBKeqNsvYPFjlKHm42ltT9xqa5M+ogm2z5R5luTuPFbNfqmlmoUNuhffPBMipxyzkVes6R473tckvK1fqwmHKt7pM3pXxEXOxm6cRz5djiRPhZz5v0mRPx5oMOyzA6Va+F7RYncdGHBoeSCqN1YPoDnoUo0dHPy3DsWf2KyOP2h8143J9aENIx4k6cjMPN6rOEibYTv1iSbRXNujyoIHw7YZSNOLykNndCEYFwCUV3kQp+GRKWb8uIgQllmPNxRxj2wquFjx2+EpqQDY7LdPMrYcDp5xAgP78q3FGGD0XsFGx0EmOBd4Va5DgLvCvMIjfhT/CPqAnR2UBnSiDCACFkcEcyALD277AD17hn+Vc82EwOKv8ZXhvtCF8lfAse3LQPBPS0+LM6Lh8hnsdkilTl/uT5g2L7dM5dfo/uwA9vHAC9nuqw0I30G0DuswntHx96EPo0XfEamT95tTRwg5EDoM+428XICJWX4SJmJ/ML6PMay8TnI8THFpc7YAOwxriLu2dqhgPonqkLYAEsgAWwABbAAlgAC2ABLIAFsAAWwAJYAP9jwOwvj6KZAe7lZQyAve5zk9/D6FXRyFKeL8vlWEXV7G9NaWLKm67oq/4BjiRAmdYxlVQAAAAASUVORK5CYII="
+      type="image/x-icon"
+    />
+    <title>Shaik Fazil</title>
+  </head>
+  <body class="font-nunito">
+    <!-- intro section -->
+    <div
+      class="h-96 lg:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden"
+    >
+      <!-- navbar -->
+      <nav class="w-full fixed z-10 bg-white top-0 px-4 dark:bg-slate-900">
+        <div class="container mx-auto py-5 flex justify-between items-center">
+          <img src="./logo.jpg" class="rounded-full w-10 h-10" alt="" />
+          <ul
+            class="space-x-10 font-bold text-gray-600 dark:text-gray-100 text-sm uppercase hidden md:flex"
+          >
+            <li class="hover:text-gray-500">
+              <a href="#">homepage</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#about">about me</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#services">services</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#works">works</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#contact">contact</a>
+            </li>
+          </ul>
+          <i
+            id="moon"
+            class="bi bi-moon-fill hidden md:block cursor-pointer text-yellow-300"
+          ></i>
+          <div class="space-y-1 md:hidden cursor-pointer z-10" id="showNav">
+            <div class="w-6 h-0.5 bg-black"></div>
+            <div class="w-6 h-0.5 bg-black"></div>
+            <div class="w-6 h-0.5 bg-black"></div>
+          </div>
+        </div>
+        <ul
+          class="bg-indigo-700 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-center text-white hidden"
+          id="hiddenNavbar"
+        >
+          <li class="hover:text-gray-500">
+            <a id="hLinks" href="#">homepage</a>
+          </li>
+          <li class="hover:text-gray-500">
+            <a id="hLinks" href="#about">about me</a>
+          </li>
+          <li class="hover:text-gray-500">
+            <a id="hLinks" href="#services">services</a>
+          </li>
+          <li class="hover:text-gray-500">
+            <a id="hLinks" href="#works">works</a>
+          </li>
+          <li class="hover:text-gray-500">
+            <a id="hLinks" href="#contact">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- intro content -->
+      <!-- image -->
+      <img
+        src="./logo-removebg.png"
+        class="h-5/6 object-cover mx-auto absolute bottom-0 right-0 lg:left-0"
+        alt=""
+      />
+      <!-- circle -->
+      <div
+        class="absolute hidden -z-10 lg:block -bottom-2/4 w-big h-big bg-indigo-900 rounded-full right-0 left-0 mx-auto"
+      ></div>
+      <!-- animated text -->
+      <div
+        class="absolute top-1/3 left-5 text-xl sm:left-10 sm:text-4xl md:left-1/4 md:text-6xl lg:left-5 xl:left-52 lx-text-7xl font-bold"
+      >
+        <span class="text-gray-600">Web</span>
+        <p id="text" class="text-red-500"></p>
+      </div>
+      <!-- texts -->
+      <div
+        class="hidden lg:flex flex-col absolute w-1/3 right-8 top-0 h-fit bottom-0 bg-white p-6 m-auto gap-5 rounded-md shadow-xl dark:bg-slate-900 dark:shadow-slate-800"
+      >
+        <h1 class="text-4xl font-bold text-indigo-900">Hi, I'm Fazil</h1>
+        <p class="text-gray-400">
+          I'm passionate about Web Development. With lots of efforts and
+          practise I can strongly say that I can build good responsive and
+          dynamic Web Apps. Checkout my projects for better understanding.
+        </p>
+        <a
+          href="#contact"
+          class="bg-indigo-600 text-white text-xl rounded-md font-semibold px-3 py-2 w-fit"
+          >Hire Me</a
+        >
+      </div>
+    </div>
+    <!-- about -->
+    <div id="about" class="px-10 dark:bg-slate-900 lg:w-4/5 mx-auto">
+      <div class="container mx-auto flex flex-col-reverse lg:flex-row py-40">
+        <!-- left -->
+        <div class="relative pt-10 mx-auto w-3/4 lg-w-full lg:mr-6 lg:pt-0">
+          <div class="rounded-3xl mx-auto lg:mx-0 h-full overflow-hidden">
+            <img src="./show.jpeg" alt="" />
+          </div>
+        </div>
+        <!-- Right -->
+        <div class="my-auto flex flex-col gap-3 w-full">
+          <h1 class="text-indigo-600 font-bold">ABOUT ME</h1>
+          <h1 class="text-3xl font-medium dark:text-white">Web Developer</h1>
+          <p class="text-gray-400">
+            I'm a fresher with fresh mindset that can help the organization to
+            get better outcomes, "Till now every organization feels regret to
+            not to have me :&rpar;" I hope you don't feel in the same way, for
+            that let's meet at mail box &#9774;
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- skills -->
+    <div id="services" class="dark:bg-slate-900">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h1 class="text-indigo-600 font-bold">SKILLS</h1>
+          <h1 class="text-3xl dark:text-white">Technical Skills</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            I'm having good knowledge on the web technologies by doing lots of
+            practise and gaining knowledge helped me to build the projects from
+            scratch. Getting to know the concepts in details had helped a lot at
+            problem solving.
+          </p>
+        </div>
+        <!-- bottom -->
+
+        <!-- skills range -->
+        <div class="space-y-4 mt-5">
+          <div class="w-3/5 mx-auto">
+            <h2 class="text-gray-400 font-medium">HTML & CSS</h2>
+            <div class="w-full bg-gray-200 h-1.5 rounded-md">
+              <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+            </div>
+          </div>
+          <div class="w-3/5 mx-auto">
+            <h2 class="text-gray-400 font-medium">JavaScript</h2>
+            <div class="w-full bg-gray-200 h-1.5 rounded-md">
+              <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
+            </div>
+          </div>
+          <div class="w-3/5 mx-auto">
+            <h2 class="text-gray-400 font-medium">ReactJS</h2>
+            <div class="w-full bg-gray-200 h-1.5 rounded-md">
+              <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
+            </div>
+          </div>
+          <div class="w-3/5 mx-auto">
+            <h2 class="text-gray-400 font-medium">NodeJS</h2>
+            <div class="w-full bg-gray-200 h-1.5 rounded-md">
+              <div class="w-3/6 bg-indigo-600 h-1.5 rounded-md"></div>
+            </div>
+          </div>
+          <div class="w-3/5 mx-auto">
+            <h2 class="text-gray-400 font-medium">SQLite</h2>
+            <div class="w-full bg-gray-200 h-1.5 rounded-md">
+              <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- works -->
+
+    <div id="works" class="py-40 dark:bg-slate-900">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h1 class="text-indigo-600 font-bold">PORTFOLIO</h1>
+          <h1 class="text-3xl dark:text-white">Works & Projects</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            I've build some amazing projects that made me a confident web
+            developer and while developing projects I faced some issues and I
+            solved it and overcome it with the best and optimsed approach
+          </p>
+        </div>
+        <!-- bottom -->
+        <div class="flex flex-wrap w-2/3 mx-auto p-5 sm:p-0 justify-around">
+          <!-- card -->
+
+          <div
+            class="h-64 w-full md:w-5/12 lg:w-72 shadow-xl rounded-lg p-4 my-3 md:my-10 hover:p-0 transition-all"
+          >
+            <a href="https://skechersin.netlify.app/" target="_blank">
+              <img
+                class="h-full w-full"
+                src="https://www.skechers.in/dw/image/v2/BGNZ_PRD/on/demandware.static/-/Sites-skechersin-Library/default/dwf3cc4168/Home-Page/Desktop/INTL63535-INTL---Unisex-Sport-Group-SP24-eCom-Assets---Apr-19_DESKTOP_1920X603.jpg?sw=1300&q=95"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div
+            class="h-64 w-full md:w-5/12 lg:w-72 shadow-xl rounded-lg p-4 hover:p-0 transition-all my-3 md:my-10"
+          >
+            <a href="https://reactemoji.ccbp.tech">
+              <img
+                class="h-full w-full"
+                src="https://assets.ccbp.in/frontend/content/react-js/emoji-game-lg-output-v2.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div
+            class="h-64 w-full md:w-5/12 lg:w-72 shadow-xl rounded-lg p-4 hover:p-0 transition-all my-3 md:my-10"
+          >
+            <a href="https://webstore.ccbp.tech/" target="_blank">
+              <img
+                class="h-full w-full"
+                src="https://assets.ccbp.in/frontend/content/react-js/app-store-lg-output-v2.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div
+            class="h-64 w-full md:w-5/12 lg:w-72 shadow-xl rounded-lg p-4 hover:p-0 transition-all my-3 md:my-10"
+          >
+            <a href="https://jobwebapp.ccbp.tech">
+              <img
+                class="h-full w-full"
+                src="https://assets.ccbp.in/frontend/content/react-js/jobby-app-home-lg-output.png"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+
+    <div id="contact" class="dark:bg-slate-900">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h1 class="text-indigo-600 font-bold">CONTACT</h1>
+          <h1 class="text-3xl dark:text-white">Have a Question?</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            Do you have an idea? Let's discuss it and see what we can do
+            together.
+          </p>
+        </div>
+        <!-- bottom -->
+        <form class="mt-5 p-8 flex flex-col gap-5 items-center">
+          <input
+            class="p-2 md:w-1/2 w-full ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
+            type="text"
+            placeholder="Name"
+          />
+          <input
+            class="p-2 md:w-1/2 w-full ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
+            type="email"
+            placeholder="Email"
+          />
+          <textarea
+            class="p-2 md:w-1/2 w-full ring-1 ring-indigo-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+          <button
+            type="button"
+            class="w-1/2 bg-indigo-600 text-white font-medium px-3 py-2 rounded-md cursor-pointer"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="w-full bg-gray-800">
+      <div class="container mx-auto p-5 flex justify-between items-center">
+        <img src="./logo.jpg" class="rounded-full w-10 h-10" alt="" />
+        <span class="hidden md:block font-medium text-white"
+          >&copy; rights reserved by Fazil</span
+        >
+        <div class="flex gap-4">
+          <a href="https://www.linkedin.com/in/shaik-fazil/" target="_blank">
+            <i class="bi bi-linkedin text-2xl text-white"></i
+          ></a>
+          <a href="https://github.com/sasfazil" target="_blank">
+            <i class="bi bi-github text-2xl text-white"></i
+          ></a>
+          <a href="https://www.hackerrank.com/dashboard" target="_blank">
+            <i class="bi bi-code-slash text-2xl text-white"></i
+          ></a>
+          <a href="mailto:s.a.s.fazil@gmail.com"
+            ><i class="bi bi-envelope-at text-2xl text-white"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+    <script src="./autotyping.js"></script>
+  </body>
+</html>
